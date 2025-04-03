@@ -14,7 +14,6 @@ const TaskAllocationDashboard = () => {
     { id: 1, name: "Jane Smith", skills: ["JavaScript", "React"], workload: 1, capacity: 1 }
   ];
 });
-
 const [tasks, setTasks] = useState(() => {
   const savedTasks = localStorage.getItem('tasks');
   return savedTasks ? JSON.parse(savedTasks) : [
@@ -362,6 +361,7 @@ const autoAllocate = (taskId) => {
   };
 
   return (
+
     <div className="flex flex-col h-screen">
       {/* Header */}
 <header className="bg-blue-600 text-white p-4">
