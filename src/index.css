@@ -1,0 +1,104 @@
+/* Background transition from slightly dark to light */
+@keyframes backgroundFade {
+  0% {
+    background: linear-gradient(to bottom, #2a2a3a, #3a3a4a, #4a4a5a);
+  }
+  50% {
+    background: linear-gradient(to bottom, #24246a, #17176e, #1c1c72);
+  }
+  100% {
+    background: linear-gradient(to bottom, #2b2bc2, #3a3a4a, #3f3fa3);
+  }
+}
+
+/* Text color animation for dashboard, team, task, allocation */
+@keyframes textColorTransition {
+  0% {
+    color: #e71d1d;
+  }
+  50% {
+    color: #222222;
+  }
+  100% {
+    color: #eb3939;
+  }
+}
+
+:root {
+  font-family: "Poppins", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #efeded;
+  animation: backgroundFade 20s infinite alternate ease-in-out;
+}
+
+a {
+  font-weight: 600;
+  color: #ff7eb3;
+  transition: color 0.3s ease-in-out;
+}
+a:hover {
+  color: #ff478a;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Header */
+h1 {
+  font-size: 3.5em;
+  font-weight: bold;
+  animation: textColorTransition 20s infinite alternate ease-in-out;
+}
+
+/* Darker color for Dashboard, Team, Task, Allocation */
+.dashboard-title,
+.team-title,
+.task-title,
+.allocation-title {
+  font-weight: bold;
+  font-size: 2rem;
+  animation: textColorTransition 20s infinite alternate ease-in-out;
+}
+
+/* Buttons */
+button {
+  border-radius: 10px;
+  border: none;
+  padding: 0.8em 1.5em;
+  font-size: 1em;
+  font-weight: 600;
+  font-family: inherit;
+  color: rgb(197, 74, 74);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 20px rgba(0, 119, 255, 0.4);
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #0077ff, #0057b8);
+}
+
+.primary-btn:hover {
+  background: linear-gradient(135deg, #0057b8, #003b82);
+}
+
+.secondary-btn {
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+}
+
+.secondary-btn:hover {
+  background: linear-gradient(135deg, #ff478a, #ff3c6d);
+}
